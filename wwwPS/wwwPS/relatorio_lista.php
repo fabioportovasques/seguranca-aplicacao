@@ -1,9 +1,4 @@
-
-
 <?php
-
-	require 'secury_check.php';
-
 	$conexao = new pdo('sqlite:bancodedados.data');
 	$pesquisa = "select a.id, t.avaliacao, p.documento, p.nome, p.sexo, ( (strftime('%Y', 'now') - strftime('%Y', p.nascimento)) - (strftime('%m-%d', 'now') < strftime('%m-%d', p.nascimento))) idade, a.diagnostico, a.medicamento, a.encaminhamento from triagem t join paciente p on p.id = t.paciente join atendimento a on a.triagem = t.id order by a.id desc; ";
 	if ( isset($_REQUEST['pesquisa']) ) {
@@ -24,8 +19,6 @@
 				<input type="text" name="pesquisa" />
 				<input type="submit" value="Pesquisar" />
 			</frameset>
-
-			
 		</form>
 		<table border="1">
 			<caption>Relatório de Atendimentos Concluídos</caption>

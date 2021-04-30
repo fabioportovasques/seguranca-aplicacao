@@ -1,8 +1,3 @@
-<?php  
-	require 'secury_check.php';
-?>
-
-
 <?php
 	$conexao = new pdo('sqlite:bancodedados.data');
 	$update = "update triagem set celsius = '".$_REQUEST['celsius']."', bpm = '".$_REQUEST['bpm']."', pas = '".$_REQUEST['pas']."', pad = '".$_REQUEST['pad']."', historia = '".$_REQUEST['historia']."', avaliacao = '".$_REQUEST['avaliacao']."', datahora = datetime('now') where id = '".$_REQUEST['triagem']."'; ";

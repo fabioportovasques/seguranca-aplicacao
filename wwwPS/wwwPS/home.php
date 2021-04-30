@@ -1,5 +1,3 @@
-
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -18,10 +16,10 @@
 
     <div id="central-login">
       <div class="content" align="center">
-        <form method="POST" action="login.php" class="col-sm-4">
+        <form method="POST" class="col-sm-4">
           <div class="input-container">
             <i class="fa fa-user icon"></i>
-              <input type="text" name="usuario" class="form-control" autocomplete="off" placeholder="Usuário"><br>
+              <input type="text" name="usuario" class="form-control" placeholder="Usuário"><br>
           </div>
 
           <div class="input-container">
@@ -29,7 +27,7 @@
               <input type="password" name="senha" class="form-control" placeholder="***********"><br>
           </div>
 
-          <input type="submit" name="Entrar" class="btn btn-outline-success btn-lg btn-block">
+          <input type="submit" name="Entrar" class="btn btn-outline-primary btn-lg btn-block">
         </form>
       </div>
     </div>

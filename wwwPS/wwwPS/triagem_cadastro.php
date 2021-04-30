@@ -1,8 +1,3 @@
-<?php  
-	require 'secury_check.php';
-?>
-
-
 <?php
 	$conexao = new pdo('sqlite:bancodedados.data');
 	$pesquisa = "select t.id, p.documento, p.nome, p.sexo, ( (strftime('%Y', 'now') - strftime('%Y', p.nascimento)) - (strftime('%m-%d', 'now') < strftime('%m-%d', p.nascimento))) idade from triagem t join paciente p on p.id = t.paciente where t.id = '".$_REQUEST['id']."' and t.avaliacao is null ";

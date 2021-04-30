@@ -1,5 +1,4 @@
 <?php
-	require 'secury_check.php';
 	$conexao = new pdo('sqlite:bancodedados.data');
 	$pesquisa = "select t.id, t.avaliacao, p.documento, p.nome, p.sexo, ( (strftime('%Y', 'now') - strftime('%Y', p.nascimento)) - (strftime('%m-%d', 'now') < strftime('%m-%d', p.nascimento))) idade from triagem t join paciente p on p.id = t.paciente where t.avaliacao is not null and (select count(*) from atendimento where triagem = t.id) = 0 order by t.avaliacao desc, p.datahora; ";
 	$resultado = $conexao->query($pesquisa)->fetchAll();

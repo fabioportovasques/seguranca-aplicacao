@@ -1,8 +1,3 @@
-
-<?php  
-	require 'secury_check.php';
-?>
-
 <?php
 	$conexao = new pdo('sqlite:bancodedados.data');
 	//$drop = "drop table if exists paciente; ";

@@ -1,7 +1,3 @@
-<?php  
-	require 'secury_check.php';
-?>
-
 <html>
 	<head>
 	</head>
