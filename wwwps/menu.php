@@ -38,6 +38,6 @@
 	<a href="logout.php">Sair</a>
 
 	<span class="usuario alert alert-success"><?php if (isset ($_SESSION['usuario']) ) {
-		print $_SESSION['usuario']; } ?></span>
+		print "Bem Vindo". "<br />"."<hr />". $_SESSION['usuario']; } ?></span>
 </div>
 
