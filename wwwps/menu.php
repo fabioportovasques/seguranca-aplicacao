@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+ <link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>
+
 <style type="text/css">
 	a {
 		color: blue;
@@ -24,7 +37,7 @@
 	<a href="relatorio_lista.php">Relatório</a>
 	<a href="logout.php">Sair</a>
 
-	<span class="usuario"><?php if (isset ($_SESSION['usuario']) ) {
+	<span class="usuario alert alert-success"><?php if (isset ($_SESSION['usuario']) ) {
 		print $_SESSION['usuario']; } ?></span>
 </div>
 

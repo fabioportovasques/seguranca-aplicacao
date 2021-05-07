@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-   <!-- <link rel="stylesheet" href="css/bootstrap.min.css">-->
+   <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
@@ -18,8 +18,9 @@
 
     <div id="central-login">
       <div class="content" align="center">
+        <label class="label-control label">Login Sistema</label>
         <form method="POST" action="login.php" class="col-sm-4">
-          <div class="input-container">
+          <div class="input-container">            
             <i class="fa fa-user icon"></i>
               <input type="text" name="usuario" class="form-control" autocomplete="off" placeholder="Usuário"><br>
           </div>

@@ -1,6 +1,6 @@
 .row{margin: 0px; padding-top: 0px;}
 #central-login{
-	background-image:  url("../#");
+	background-image:  url("../images/sus7.png");
 	background-repeat: repeat; 
 	background-position: right;
 	background-size: cover;
@@ -15,8 +15,3 @@
 #central-login .icon{padding: 15px 10px 10px 10px; background-color: dodgerblue; color: #FFF; min-width: 50px; text-align: center;}
 #central-login .form-control{border-radius: 0px; width: 100%; padding-top: 10px; outline: none; padding-top: 22px; padding-bottom: 22px;}
 #central-login .form-control:focus{border: 2px solid dodgerblue;}
-
-.label{
-	font-family: arial;
-	font-size: 18px;
-}
