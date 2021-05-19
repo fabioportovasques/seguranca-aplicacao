@@ -2,6 +2,8 @@
 
 	session_start();
 
+	require ('auditoria.php');
+
 	if (!isset($_SESSION['usuario']) ) {
 		header('location:home.php');
 		exit();
