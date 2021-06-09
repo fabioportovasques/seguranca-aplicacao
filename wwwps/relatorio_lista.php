@@ -5,11 +5,11 @@
 	require 'secury_check.php';
 
 	$conexao = new pdo('sqlite:bancodedados.data');
-	//$pesquisa = "select a.id, t.avaliacao, p.documento, p.nome, p.sexo, ( (strftime('%Y', 'now') - strftime('%Y', p.nascimento)) - (strftime('%m-%d', 'now') < strftime('%m-%d', p.nascimento))) idade, a.diagnostico, a.medicamento, a.encaminhamento from triagem t join paciente p on p.id = t.paciente join atendimento a on a.triagem = t.id order by a.id desc; ";
-	$pesquisa = "select a.id, t.avaliacao, p.documento, p.nome, p.sexo, ( (strftime('%Y', 'now') - strftime('%Y', p.nascimento)) - (strftime('%m-%d', 'now') < strftime('%m-%d', p.nascimento))) idade, a.diagnostico, a.medicamento, a.encaminhamento from triagem t join paciente p on p.id = t.paciente join atendimento a on a.triagem = t.id where p.nome like ? or a.diagnostico like ? or a.medicamento like ? or a.encaminhamento like ? order by a.id desc; ";
-	//$pesquisa = "select * from paciente";
+	$pesquisa = "select a.id, t.avaliacao, p.documento, p.nome, p.sexo, ( (strftime('%Y', 'now') - strftime('%Y', p.nascimento)) - (strftime('%m-%d', 'now') < strftime('%m-%d', p.nascimento))) idade, a.diagnostico, a.medicamento, a.encaminhamento from triagem t join paciente p on p.id = t.paciente join atendimento a on a.triagem = t.id order by a.id desc; ";
+	//$pesquisa = "select * from paciente where p.nome like '?' ";
 	if ( isset($_REQUEST['pesquisa']) ) {
-		$dados['%'.$_REQUEST['pesquisa'].'%'];
+		$pesquisa = "select a.id, t.avaliacao, p.documento, p.nome, p.sexo, ( (strftime('%Y', 'now') - strftime('%Y', p.nascimento)) - (strftime('%m-%d', 'now') < strftime('%m-%d', p.nascimento))) idade, a.diagnostico, a.medicamento, a.encaminhamento from triagem t join paciente p on p.id = t.paciente join atendimento a on a.triagem = t.id where p.nome like ? or a.diagnostico like ? or a.medicamento like ? or a.encaminhamento like ? order by a.id desc; ";
+		$dados = ['%'.$_REQUEST['pesquisa'].'%'];
 	}else {
 		$dados['%'];
 	}
